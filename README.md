@@ -2,7 +2,9 @@
 
 This is a fork of the [Babel](https://github.com/babel/babel) [jest](https://github.com/facebook/jest) plugin.
 
+Even though the original package provides the filename option to babel.transform, we still have problems with Babel transforming some of our module filenames.
 
+According to [this issue](https://github.com/babel/babel/issues/6296), adding `filename` to options should be sufficient, but we've found that only by using the transformFileSync API will Babel accurately pick up .babelrc in all cases.
 
 ## Usage
 
