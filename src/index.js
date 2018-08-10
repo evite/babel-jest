@@ -88,7 +88,7 @@ var createTransformer = function createTransformer(options) {
   options = Object.assign({}, options, {
     compact: false,
     plugins: (options && options.plugins) || [],
-    presets: ((options && options.presets) || []).concat(['jest']),
+    presets: ((options && options.presets) || []),
     sourceMaps: 'both',
   });
   delete options.cacheDirectory;
